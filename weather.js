@@ -85,8 +85,7 @@ async function chechWeather(cityname) {
 
         function updateWeatherBg(condition) {
             const bg = document.querySelector("body");
-            const lowerCase = condition.toLowerCase();
-            // bg.style.backgroundImage = weatherBg[lowerCase] || weatherBg['clear'];  
+            const lowerCase = condition.toLowerCase(); 
             
             const backgroundSettings = weatherBg[lowerCase] || weatherBg['clear'];
             bg.style.backgroundImage = backgroundSettings.image;
@@ -103,6 +102,3 @@ searchBtn.addEventListener("click" , () => {
     chechWeather(searchBox.value);
 });
 
-
-// mist,drizzle - <i class="fa-solid fa-cloud-rain"></i>            clear - <i class="fa-solid fa-sun"></i> 
-// rain - <i class="fa-solid fa-cloud-showers-heavy"></i>   cloud - <i class="fa-solid fa-cloud-sun"></i>
