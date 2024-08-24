@@ -103,3 +103,31 @@ h1 {
     display: none;
 }
 
+@media (max-width:400px) and (max-height:800px){
+    .card {
+        width: 25vw;
+        height: 65vh;
+    }
+
+    .box1 i, .box2 i, .box3 i {
+        font-size: 40px;
+    }
+
+    .box1 h1 {
+        font-size: 1.5rem;
+    }
+    .box2 p, .box3 p {
+        font-size: 0.8rem;
+    }
+    
+    .box2 {
+        position: absolute;
+        left:26%;
+    }
+
+    .box3 {
+        position: absolute;
+        left: 50%;
+    }
+}
+
