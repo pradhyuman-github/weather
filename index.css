@@ -136,22 +136,14 @@ h1 {
         font-size: 1.3rem;
     }
     .search {
-        border: none;
         border-radius: 10px;
         width: 25vw;
-        margin: 10px;
-        padding: 10px;
         font-size: 12px;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
     }
     .btn {
-        border: none;
         border-radius: 10px;
         padding: 10px;
         font-size: 12px;
-        background-color: green;
     }
     .box2 {
         position: absolute;
