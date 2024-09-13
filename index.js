@@ -33,7 +33,7 @@ async function chechWeather(cityname) {
             weatherIcon.className = "weather-icon";
             const iconMap = {'Clear':'fa-sun', 'Clouds':'fa-cloud', 'Rain':'fa-cloud-showers-heavy', 
                 'Mist':'fa-cloud-rain', 'Drizzle':'fa-cloud-rain', 'Snow': 'fa-snowflake', 
-                'Haze': 'fa-smog', 'Fog': 'fa-smog'
+                'Haze': 'fa-smog', 'Fog': 'fa-smog', 'Thunderstorm': 'fa-cloud-bolt'
             };
             const iconClass = iconMap[condition] || 'fa-cloud-sun';
             weatherIcon.classList.add('fas', iconClass);
@@ -78,6 +78,11 @@ async function chechWeather(cityname) {
             },
             'fog' : {
                 image : "url('weather-img/fog.jpg')",
+                size : "100% 100%",
+                repeat : "no-repeat"
+            },
+            'thunderstorm' : {
+                image : "url('weather-img/thunder.jpg')",
                 size : "100% 100%",
                 repeat : "no-repeat"
             }
