@@ -1,47 +1,61 @@
+html {
+    font-size: 62.5% ;
+}
+
 body {
     display: flex;
     align-items: center;
     justify-content: center;
+    box-sizing: border-box;
 }
 
 body {
     background-image: url("weather-img/clearsky.jpg");
     background-repeat: no-repeat;
-    background-size:100% 100%;
+    background-size:cover; 
+    background-position: center;
 }
 
 .card {
-   margin:20px;
-   padding: 50px;
+   margin:2rem;
+   padding: 5rem;
    border: none;
    border-radius: 1rem;
-   width:25vw;
+   max-width: 32rem;
    height: 75vh;
    background-image: linear-gradient(135deg, #fdfcfb57 0%, #e2d1c35d 100%); 
 }
 
-h1 {
+.heading {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content:center;
+    padding: 0.8rem;
+    margin: 0.8rem;
+    max-height: 2rem;
+}
+
+.heading p {
+    font-size: 4rem;
+    font-weight: bold;
 }
 
 .btn {
     border: none;
-    border-radius: 12px;
-    padding: 10px;
-    font-size: 18px;
+    border-radius: 1.2rem;
+    padding: 1rem;
+    font-size: 1.8rem;
     background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 
 }
 
 .search {
     border: none;
-    border-radius: 16px;
+    border-radius: 1.6rem;
     width: 100%;
-    margin: 10px;
-    padding: 10px;
-    font-size: 18px;
+    margin: 1rem;
+    padding: 1rem;
+    font-size: 1.8rem;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -51,120 +65,165 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 10px;
+    padding: 1rem;
     margin: auto;
+}
+
+.info-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.box1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1rem;
 }
 
 .box1 i  {
-    font-size: 70px;
+    font-size: 7rem;
     display: flex;
     justify-content: center;  
-    padding: 8px;
+    padding: 0.8rem;
 }
 
-.box1 h2, h1, h3 {
+.box1 p {
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 8px;
+    padding: 0.8rem;
     margin: auto;
+    font-weight: bold;
 }
 
-.box2 {
-    position:absolute;
-    padding: 10px;
-    left: calc(50% - 180px);
-    bottom: calc(7% + 20px);
+.box1 .cityname {
+    font-size: 2.5rem;
+}
+
+.box1 .temperature {
+    font-size: 3.5rem;
+}
+
+.box1 .w-condition {
+    font-size: 2rem
+}
+
+.bottom-box {
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    gap: 12rem;
+    padding: 1.5rem;
+    margin: 1.5rem;
+}
+
+.box2 , .box3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .box2 i , .box3 i {
-    font-size: 70px;
     display: flex;
+    align-items: center;
     justify-content: center;
-    padding: 10px;
+    font-size: 7rem;
+    padding: 1rem;
 }
 
-.box2 p , .box3 p{
+.box2 p , .box3 p {
     display: flex;
+    align-items: center;
     justify-content: center ;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 1.8rem;
     margin: auto;
-    padding: 5px;
+    padding: 0.5rem;
 }
 
-.box3 {
-    position: absolute;
-    padding: 10px;
-    bottom: 10vh;
-    left: 54vw;
+.box3 .speed {
+    font-size: 1.8rem;
+    width: 7vw;
 }
 
 .error-message {
     text-align: center;
-    font-size: 20px;
+    font-size: 2.5rem;
     display: none;
 }
 
 @media (max-width:768px) {
-    .heading {
-        font-size: 1.5rem;
+    .heading p {
+        font-size: 3rem;
     }
     .card {
-        width: 25vw;
-        height: 65vh;
+        max-width: 35vw; 
+        height: 70vh;
     }
     .search {
-        border-radius: 10px;
+        border-radius: 1rem;
         width: 20vw;
-        font-size: 14px;
+        font-size: 1.4rem;
     }
     .btn {
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 14px; 
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: 1.4rem; 
+    }
+    .bottom-box {
+        gap: 8rem;
     }
     .box1 i, .box2 i, .box3 i {
-        font-size: 40px;
+        font-size: 4rem;
     }
-    .box1 h1 {
+    .box1 .temperature {
+        font-size: 2.4rem;
+    }
+    .box1 .cityname , .box1 .w-condition {
+        font-size: 1.8rem;
+    }
+    .box2 p , .box3 .wind {
         font-size: 1.5rem;
+        width: 15vw;
     }
-    .box2 p, .box3 p {
-        font-size: 0.8rem;
-    }
-    .box2 {
-        position: absolute;
-        left:calc(50% - 110px);
-    }
-    .box3 {
-        position: absolute;
-        left: 54vw;
+    .box3 .speed {
+        font-size: 1.5rem;
+        width: 15vw;
     }
 }
 
 @media (max-width:480px) {
-    .heading {
-        font-size: 1.3rem;
+    .heading p {
+        font-size: 2.5rem;
+    }
+    .card {
+        max-width: 50vw;
+        height: 70vh;
     }
     .search {
-        border-radius: 10px;
-        width: 25vw;
-        font-size: 12px;
+        border-radius: 1rem;
+        width: 30vw;
+        font-size: 1.3rem;
     }
     .btn {
-        border-radius: 10px;
-        padding: 10px;
-        font-size: 12px; 
+        border-radius: 1rem;
+        padding: 1rem;
+        font-size: 1.3rem; 
     }
-    .box1 h2, h3 {
-        font-size: 1rem;
+    .bottom-box {
+        gap: 4rem;
     }
-    .box2 {
-        position: absolute;
-        left: calc(50% - 100px);
+    .box1 .cityname , .box1 .w-condition{
+        width: 28vw;
+        font-size: 1.6rem;
     }
-    .box3 {
-        position: absolute;
-        left: 52vw;
+    .box2 p , .box3 .wind, .box3 .speed {
+        width: 30vw;
     }
-}
+} 
