@@ -44,60 +44,51 @@ async function chechWeather(cityname) {
             'clear' : {
                 image: "url('weather-img/clearsky.jpg')",
                 size : "cover",
-                repeat : "no-repeat"
             },
             'clouds' : { 
                 image : "url('weather-img/cloud.avif')",
                 size : "100% 100%",
-                repeat : "no-repeat"
             },
             'rain' : {
                 image : "url('weather-img/rain.jpg')",
                 size : "cover",
-                repeat : "no-repeat"
             },
             'mist' : {
                 image : "url('weather-img/mist.jpg')",
                 size : "100% 100%",
-                repeat : "no-repeat"
             },
             'drizzle' : {
                 image : "url('weather-img/mist.jpg')",
                 size : "100% 100%",
-                repeat : "no-repeat"
             },
             'snow' : {
                 image : "url('weather-img/snow.jpg')",
                 size : "100% 100%",
-                repeat : "no-repeat"
             },
             'haze' : {
                 image : "url('weather-img/haze.jpg')",
                 size : "cover",
-                repeat : "no-repeat"
+                // repeat : "no-repeat"
             },
             'fog' : {
                 image : "url('weather-img/fog.jpg')",
                 size : "100% 100%",
-                repeat : "no-repeat"
             },
             'thunderstorm' : {
                 image : "url('weather-img/thunder.jpg')",
                 size : "100% 100%",
-                repeat : "no-repeat"
             }
         };
 
         function updateWeatherBg(condition) {
             const bg = document.querySelector("body");
-            const lowerCase = condition.toLowerCase(); 
+            const lowerCase = condition.toLowerCase();
             
             const backgroundSettings = weatherBg[lowerCase] || weatherBg['clear'];
             bg.style.backgroundImage = backgroundSettings.image;
             bg.style.backgroundSize = backgroundSettings.size;
-            bg.style.backgroundRepeat = backgroundSettings.repeat;
 
-            document.querySelector("h3").innerText = condition;
+            document.querySelector(".w-condition").innerText = condition;
         }
         updateWeatherBg(condition);
     }
@@ -106,4 +97,3 @@ async function chechWeather(cityname) {
 searchBtn.addEventListener("click" , () => {
     chechWeather(searchBox.value);
 });
-
