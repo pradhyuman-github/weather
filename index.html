@@ -5,11 +5,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" >
     <link rel="shortcut icon" href="weather-img/icon.jpg">
     <link rel="stylesheet" href="index.css">
-    <title> SkyGlimpse </title>
+    <title>SkyGlimpse</title>
 </head>
 <body>
     <div class="card">
-        <h1> SkyGlimpse </h1>
+        <div class="heading">
+            <p> SkyGlimpse </p>
+        </div>
         
         <div class="align">
             <input type="text" class="search" placeholder="Enter city name..."> 
@@ -17,29 +19,33 @@
         </div>
 
         <div class="error-message">
-            <p>Write a valid city name !!</p>
+            <p>Write correct city name !!</p>
         </div>
         
-        <div class="info-box">
+        <div class="info-box">      
             <div class="box1">
                 <i class="fa-solid fa-cloud-sun weather-icon"></i>  
-                <h2 class="cityname"> - </h2>
-                <h1 class="temperature">0 °C</h1> 
-                <h3> Clear </h3>
-            </div>
-    
-            <div class="box2">
-                <i class="fa-solid fa-droplet weather-icon"></i>                
-                <p class="humidity"> 0 % </p>
-                <p>Humidity</p>
+                <p class="cityname"> - </p>
+                <p class="temperature">0 °C</p>  <!--(alt+248) ° -->
+                <p class="w-condition"> Clear </p>
             </div>
             
-            <div class="box3">
-                <i class="fa-solid fa-wind weather-icon"></i>
-                <p class="wind"> 0 km/h </p>
-                <P>Wind Speed</P>
-            </div>    
+            <div class="bottom-box">
+                <div class="box2">
+                    <i class="fa-solid fa-droplet weather-icon"></i>       
+                    <p class="humidity"> 0 % </p> 
+                    <p>Humidity</p>
+                </div>
+                
+                <div class="box3">
+                    <i class="fa-solid fa-wind weather-icon"></i>
+                    <p class="wind"> 0 km/h </p>
+                    <p class="speed">Wind Speed</p>
+                </div>    
+            </div>
+
         </div>
+
     </div>
 
     <script src="index.js"></script>
