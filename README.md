@@ -1,6 +1,8 @@
-## Watch [here](https://pradhyuman-github.github.io/weather/)
+## Sky Glimpse 
 
-**Sky Glimpse** is a weather application that fetches real-time weather data using the OpenWeatherMap API.
+Live Demo: Click [here](https://pradhyuman-github.github.io/weather/)
+
+It is a weather application that fetches real-time weather data using the OpenWeatherMap API.
 
 Its features:
 - Displays current temperature, weather conditions, humidity, and wind speed
