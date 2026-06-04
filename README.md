@@ -1,6 +1,6 @@
 ## Sky Glimpse 
 
-Live Demo: Click [here](https://pradhyuman-github.github.io/weather/)
+**Live Demo:** Click [here](https://pradhyuman-github.github.io/weather/)
 
 It is a weather application that fetches real-time weather data using the OpenWeatherMap API.
 
